@@ -1,0 +1,544 @@
+@font-face {
+  font-family: 'Amplify';
+  src: url("/fonts/Amplify.otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Amplify Light';
+  src: url("/fonts/AmplifyLight.otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Benton Sans';
+  src: url("/fonts/BentonSans-Medium.ttf");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: 'Benton Sans';
+  src: url("/fonts/BentonSans-Regular.ttf");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Benton Sans';
+  src: url("/fonts/BentonSans-Light.ttf");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'Tisa Pro';
+  src: url("/fonts/TisaPro.otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Tisa Pro Italic';
+  src: url("/fonts/TisaPro-Ita.otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Tisa Pro Bold';
+  src: url("/fonts/TisaPro-Bold.otf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Tisa Pro Bold Italic';
+  src: url("/fonts/TisaPro-BoldIta.otf");
+  font-weight: normal;
+  font-style: normal; }
+/* implementation for dropdown styles should be placed here */
+.dropdown {
+  display: inline-block; }
+  .dropdown .dropdown-toggle {
+    display: inline-block;
+    border: 0;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none; }
+    .dropdown .dropdown-toggle .icon-wrap {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      z-index: 9999; }
+      .dropdown .dropdown-toggle .icon-wrap .icon-arrow-selector {
+        display: block;
+        margin: 0 auto;
+        line-height: 1px;
+        /*Bootstrap is overriding the line height of the span causing it grow too high*/ }
+        .dropdown .dropdown-toggle .icon-wrap .icon-arrow-selector .up-arrow {
+          display: none; }
+        .dropdown .dropdown-toggle .icon-wrap .icon-arrow-selector .down-arrow {
+          display: block; }
+  .dropdown .dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+    background-color: #fff;
+    width: 105%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.35);
+    -o-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.35);
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.35);
+    padding: 3px;
+    border: 0;
+    top: 110%; }
+    .dropdown .dropdown-menu li {
+      border-bottom: 1px solid #ddd; }
+      .dropdown .dropdown-menu li:first-child {
+        -webkit-border-radius: 8px 8px 0 0;
+        -moz-border-radius: 8px 8px 0 0;
+        -ms-border-radius: 8px 8px 0 0;
+        -o-border-radius: 8px 8px 0 0;
+        border-radius: 8px 8px 0 0; }
+      .dropdown .dropdown-menu li:last-child {
+        border-bottom: 0;
+        -webkit-border-radius: 0 0 8px 8px;
+        -moz-border-radius: 0 0 8px 8px;
+        -ms-border-radius: 0 0 8px 8px;
+        -o-border-radius: 0 0 8px 8px;
+        border-radius: 0 0 8px 8px; }
+      .dropdown .dropdown-menu li.active, .dropdown .dropdown-menu li:hover {
+        background-color: #f1f5f4; }
+  .dropdown.open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    top: 100%; }
+  .dropdown.open .icon-wrap .icon-arrow-selector .up-arrow {
+    display: block; }
+  .dropdown.open .icon-wrap .icon-arrow-selector .down-arrow {
+    display: none; }
+  .dropdown.dropdown-1 .dropdown-toggle {
+    font-size: 60px;
+    color: #f26309;
+    background-color: transparent;
+    font-family: "Amplify";
+    padding-right: 50px; }
+    .dropdown.dropdown-1 .dropdown-toggle .icon-wrap {
+      height: 50px;
+      width: 50px;
+      top: 31px;
+      padding: 9px 5px 0 5px; }
+      .dropdown.dropdown-1 .dropdown-toggle .icon-wrap .icon-arrow-selector {
+        height: 15px;
+        width: 20px; }
+        .dropdown.dropdown-1 .dropdown-toggle .icon-wrap .icon-arrow-selector svg {
+          fill: #f26309; }
+  .dropdown.dropdown-1 .dropdown-menu {
+    top: 100%; }
+    .dropdown.dropdown-1 .dropdown-menu li {
+      font-size: 18px;
+      padding: 10px; }
+  .dropdown.dropdown-1.open .dropdown-menu {
+    top: 65px; }
+  .dropdown.dropdown-1.open .icon-wrap {
+    background: url("/images/arrow-selector-bg.png") no-repeat; }
+
+/* impementation for buttons should be done here */
+.btn-default {
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  box-shadow: 0 1.5px 1.5px #888888;
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+  font-family: "Amplify";
+  font-size: 20px;
+  font-weight: bold;
+  background: #e0e0de;
+  background: -moz-linear-gradient(top, #e0e0de 0%, #ccccb2 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e0e0de), color-stop(100%, #ccccb2));
+  background: -webkit-linear-gradient(top, #e0e0de 0%, #ccccb2 100%);
+  background: -o-linear-gradient(top, #e0e0de 0%, #ccccb2 100%);
+  background: -ms-linear-gradient(top, #e0e0de 0%, #ccccb2 100%);
+  background: linear-gradient(to bottom, #e0e0de 0%, #ccccb2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0de', endColorstr='#ccccb2',GradientType=0 );
+  color: black; }
+  .btn-default .gt {
+    position: relative;
+    top: 3px;
+    left: 3px; }
+
+.btn-warning {
+  background-color: #FF9933;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  box-shadow: 0 1.5px 1.5px #888888;
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+  font-family: "Amplify";
+  font-size: 20px;
+  font-weight: bold; }
+
+.btn-primary {
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  box-shadow: 0 1.5px 1.5px #888888;
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+  font-family: "Amplify";
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #3300ff; }
+
+.alert-info {
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  box-shadow: 0 1.5px 1.5px #888888;
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+  font-family: "Amplify";
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #ffff66;
+  border-radius: 100px;
+  width: 500px;
+  color: black;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-color: #ffff66; }
+
+.nav-tabs {
+  border-bottom: none; }
+
+.nav-tabs > li.left {
+  margin-right: 0px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 100px;
+  text-align: center;
+  font-family: "Amplify";
+  font-weight: bold;
+  font-size: 10px;
+  box-shadow: 1px 1px 1px 1px #888888;
+  border-radius: 0 0 0px 10px;
+  color: #888;
+  background-color: #e0e0e0;
+  overflow: hidden; }
+
+.nav-tabs > li.right {
+  margin-right: 0px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 100px;
+  text-align: center;
+  font-family: "Amplify";
+  font-weight: bold;
+  font-size: 10px;
+  box-shadow: 1px 1px 1px 1px #888888;
+  border-radius: 0 0 10px 0px;
+  background-color: #e0e0e0;
+  overflow: hidden; }
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  cursor: default;
+  background-color: #fff;
+  color: orange;
+  border-bottom-color: none;
+  font-style: italic; }
+
+.nav-tabs > li.inactive > a,
+.nav-tabs > li.inactive > a:hover,
+.nav-tabs > li.inactive > a:focus {
+  cursor: default;
+  background-color: #e0e0e0;
+  color: gray;
+  border-bottom-color: none; }
+
+.panel-default {
+  text-align: center;
+  width: 600px;
+  min-height: 100%; }
+
+.panel-footer {
+  border-top: none;
+  height: 70px;
+  padding: 15px;
+  padding-left: 55px;
+  width: 600px;
+  background: #CCCCFF;
+  margin-top: -25px; }
+
+.panel-footer button.btn-warning {
+  width: 230px;
+  height: 40px;
+  font-size: 15px; }
+
+.panel-footer button.btn-default {
+  width: 230px;
+  height: 40px;
+  font-size: 15px;
+  margin-right: 10px; }
+
+.panel-title {
+  font-family: "Amplify";
+  text-align: center;
+  font-weight: bold;
+  background-color: #ffffff;
+  font-size: 12px; }
+
+.panel-default .panel-heading .panel-title span {
+  font-family: "Amplify";
+  text-align: center;
+  background-color: #ffffff;
+  font-size: 16px;
+  font-weight: normal; }
+
+.panel-body {
+  padding: 0px;
+  height: 450px;
+  background-color: #f5f5f5; }
+
+.bars {
+  margin-left: 190px; }
+
+table {
+  margin: 0 auto; }
+
+.copts {
+  margin-top: 25px;
+  min-width: 200px;
+  float: left;
+  margin-left: 10px; }
+
+.panel-default .panel-body .copts p {
+  font-style: italic;
+  font-family: "Amplify";
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin-right: 80px; }
+
+.panel-default .panel-body .copts li {
+  display: block;
+  text-align: left;
+  margin-bottom: 20px;
+  font-family: "Amplify";
+  font-weight: bold;
+  font-size: 14px;
+  vertical-align: middle; }
+
+.coptss {
+  margin-top: 25px;
+  min-width: 370px;
+  float: right;
+  padding-bottom: 10px; }
+
+input[type=checkbox] {
+  display: none; }
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  margin: -1px 4px 0 0;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  border-radius: 4px;
+  border: 1px solid #FF6600;
+  vertical-align: middle;
+  background-color: #ffffff; }
+
+input[type="checkbox"]:checked + label {
+  background: url(images/checkmark.svg) center no-repeat;
+  background-color: #FF6600; }
+
+.panel-default .panel-body .coptss li {
+  display: block;
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 70px;
+  font-family: "Amplify";
+  font-weight: bold;
+  font-size: 14px;
+  vertical-align: middle; }
+
+.panel-default .panel-body .coptss p {
+  font-family: "Amplify";
+  font-size: 10px;
+  padding-bottom: 15px;
+  color: #b8b8b8;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 230px; }
+
+.panel-default .panel-body .coptss span {
+  display: inline-block;
+  vertical-align: middle; }
+
+.sbox {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #FF6600;
+  background-color: #ffffff; }
+
+.panel-default .panel-body .coptss label {
+  font-family: "Amplify";
+  font-size: 10px;
+  font-weight: bold;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 5px; }
+
+.oflow {
+  width: 180px; }
+
+.panel-default .panel-body .copts li.pad {
+  display: block;
+  text-align: left;
+  margin-bottom: 10px;
+  font-family: "Amplify";
+  font-weight: bold;
+  font-size: 14px;
+  vertical-align: middle; }
+
+.panel-default .panel-body .coptss li.pad {
+  display: block;
+  text-align: left;
+  margin-bottom: 10px;
+  font-family: "Amplify";
+  font-weight: bold;
+  font-size: 14px;
+  vertical-align: middle; }
+
+.btn-cla-notstarted {
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  box-shadow: 0 1.5px 1.5px #888888;
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+  font-family: "Amplify";
+  font-size: 20px;
+  font-weight: bold;
+  background: #61ccb1;
+  background: -moz-linear-gradient(top, #61ccb1 0%, #00cc99 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #61ccb1), color-stop(100%, #00cc99));
+  background: -webkit-linear-gradient(top, #61ccb1 0%, #00cc99 100%);
+  background: -o-linear-gradient(top, #61ccb1 0%, #00cc99 100%);
+  background: -ms-linear-gradient(top, #61ccb1 0%, #00cc99 100%);
+  background: linear-gradient(to bottom, #61ccb1 0%, #00cc99 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61ccb1', endColorstr='#00cc99',GradientType=0 );
+  color: white;
+  width: 180px; }
+
+.btn-cla-notstarted svg {
+  fill: #c0c0c0; }
+
+.btn-cla-notstarted span {
+  font-family: "Amplify";
+  font-size: 18px;
+  font-weight: bold; }
+
+.btn-cla-started {
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  box-shadow: 0 1.5px 1.5px #888888;
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+  font-family: "Amplify";
+  font-size: 20px;
+  font-weight: bold;
+  background: #61ccb1;
+  background: -moz-linear-gradient(top, #61ccb1 0%, #00cc99 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #61ccb1), color-stop(100%, #00cc99));
+  background: -webkit-linear-gradient(top, #61ccb1 0%, #00cc99 100%);
+  background: -o-linear-gradient(top, #61ccb1 0%, #00cc99 100%);
+  background: -ms-linear-gradient(top, #61ccb1 0%, #00cc99 100%);
+  background: linear-gradient(to bottom, #61ccb1 0%, #00cc99 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61ccb1', endColorstr='#00cc99',GradientType=0 );
+  color: white;
+  width: 180px;
+  opacity: 0.4; }
+
+.btn-cla-started span {
+  font-family: "Amplify";
+  font-size: 18px;
+  font-weight: bold; }
+
+.btn-stu-default {
+  width: 180px;
+  height: 80px;
+  position: relative;
+  border-radius: 15px;
+  font-family: "Amplify";
+  line-height: 15px;
+  background: #c0c0c0; }
+
+.stu-last {
+  margin-top: 5px;
+  margin-left: 5px;
+  color: #888888;
+  font-size: 25px;
+  float: left;
+  clear: left; }
+
+.stu-first {
+  color: #888888;
+  margin-left: 5px;
+  font-size: 14px;
+  float: left;
+  clear: left;
+  position: relative; }
+
+.example-container {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #333;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: relative; }
+
+.block-info {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 0 4px 0 4px;
+  background: #fff;
+  padding: 2px 7px;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc; }
+
+pre {
+  position: relative; }
+
+/*NOT NEEDED IN THE ACTUAL UI STYLE GUIDE*/
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.text-left {
+  text-align: left; }
+
+.space1 {
+  margin-bottom: 10px; }
+
+/*# sourceMappingURL=styles.css.map */
